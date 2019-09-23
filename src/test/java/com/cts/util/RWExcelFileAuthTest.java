@@ -2,6 +2,7 @@ package com.cts.util;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.ComparisonFailure;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -14,10 +15,30 @@ public class RWExcelFileAuthTest {
 	private RWExcelFileAuth rWExcelFileAuth;
 
 	@Test
-	public void readExcelTest() {
+	public void readExcelTestElse() {
 
 		rWExcelFileAuth = new RWExcelFileAuth();
 		String res = rWExcelFileAuth.readExcel(getUser(), "./src/main/resources/excel/user.xlsx");
+		String expected = "";
+		assertEquals(expected, res);
+
+	}
+	
+	@Test
+	public void readExcelTest() {
+
+		rWExcelFileAuth = new RWExcelFileAuth();
+		String res = rWExcelFileAuth.readExcel(getUser(), "./src/test/resources/excel/user.xlsx");
+		String expected = "User Looged in sucessfully";
+		assertEquals(expected, res);
+
+	}
+	
+	@Test ( expected = ComparisonFailure.class)
+	public void readExcelTestException() {
+
+		rWExcelFileAuth = new RWExcelFileAuth();
+		String res = rWExcelFileAuth.readExcel(getUser(), "./src/main/resources/excel/usersdfsf.xlsx");
 		String expected = "User Looged in sucessfully";
 		assertEquals(expected, res);
 
@@ -28,6 +49,17 @@ public class RWExcelFileAuthTest {
 
 		rWExcelFileAuth = new RWExcelFileAuth();
 		String res = rWExcelFileAuth.writeExcel(getUser(), "./src/main/resources/excel/user.xlsx");
+		String expected = "User Registered Successfully";
+		assertEquals(expected, res);
+
+	}
+	
+
+	@Test ( expected = ComparisonFailure.class)
+	public void writeExcelException() {
+
+		rWExcelFileAuth = new RWExcelFileAuth();
+		String res = rWExcelFileAuth.writeExcel(getUser(), "./src/main/resources/excel/usersdds.xlsx");
 		String expected = "User Registered Successfully";
 		assertEquals(expected, res);
 

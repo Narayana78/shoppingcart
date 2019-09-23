@@ -52,5 +52,27 @@ public class BuyProductControllerTest {
 		String expected = "User Order Placed Successfully!!!The user with ID => user101 has placed the Order with ID =>od-856429 having the prodcut with ID => 102";
 		assertEquals(expected, result.getResponse().getContentAsString());
 	}
+	
+	
+	@Test
+	public void loginTestElse() throws Exception {
+		String exampleCourseJson = "{\"password\":\"password\",\"userId\":\"user12501\"}";
+
+		Mockito.when(studentService.login(Mockito.anyObject())).thenReturn("invalid user details with user Id:user12501");
+		//Mockito.when(orderService.addItem(Mockito.anyObject())).thenReturn("Product Added Successfully,Product Id:  101");
+		/*Product product = new Product();
+		product.setProdId("101");
+		product.setProdName("prodName");
+		product.setPrice("999");
+		Mockito.when(orderService.getProductById(Mockito.anyObject())).thenReturn(product);*/
+
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/placeorder").accept(MediaType.APPLICATION_JSON)
+				.content(exampleCourseJson).contentType(MediaType.APPLICATION_JSON);
+
+		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
+
+		String expected = "invalid user details with user Id:user12501";
+		assertEquals(expected, result.getResponse().getContentAsString());
+	}
 
 }

@@ -65,13 +65,13 @@ public class RWExcelFileAuth {
 							if (columnIndex == 0) {
 								userExcel.setUserId(currentCell.getStringCellValue());
 							}
-							else if (columnIndex == 1) {
+							if (columnIndex == 1) {
 								userExcel.setFirstName(currentCell.getStringCellValue());
 							}
-							else if (columnIndex == 2) {
+							if (columnIndex == 2) {
 								userExcel.setLastName(currentCell.getStringCellValue());
 							}
-							else if (columnIndex == 3) {
+							if (columnIndex == 3) {
 								userExcel.setPassword(currentCell.getStringCellValue());
 							}
 							if (user.getUserId().equals(userExcel.getUserId()) && user.getPassword().equals(userExcel.getPassword())) {

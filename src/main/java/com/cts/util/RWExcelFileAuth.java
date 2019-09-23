@@ -68,7 +68,7 @@ public class RWExcelFileAuth {
 							if (columnIndex == 1) {
 								userExcel.setFirstName(currentCell.getStringCellValue());
 							}
-							if (columnIndex == 2) {
+							else if (columnIndex == 2) {
 								userExcel.setLastName(currentCell.getStringCellValue());
 							}
 							if (columnIndex == 3) {

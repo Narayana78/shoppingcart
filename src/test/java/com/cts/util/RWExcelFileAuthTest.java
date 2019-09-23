@@ -32,6 +32,16 @@ public class RWExcelFileAuthTest {
 		assertEquals(expected, res);
 
 	}
+	
+	@Test
+	public void readExcelTestElse() {
+
+		rWExcelFileAuth = new RWExcelFileAuth();
+		String res = rWExcelFileAuth.readExcel(getUser(), "./src/test/resources/excel/user_test.xlsx");
+		String expected = "";
+		assertEquals(expected, res);
+
+	}
 
 	private User getUser() {
 		User user = new User();

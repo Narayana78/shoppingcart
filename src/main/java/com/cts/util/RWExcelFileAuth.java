@@ -44,7 +44,6 @@ public class RWExcelFileAuth {
 		User userExcel = new User();
 		try {
 
-			// FileInputStream excelFile = new FileInputStream(new
 			// File(inputFilePath));
 			// Workbook workbook = new XSSFWorkbook(excelFile);
 			Workbook workbook = new XSSFWorkbook(Files.newInputStream(Paths.get(inputFilePath)));

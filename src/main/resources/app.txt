@@ -10,6 +10,7 @@ which will show a graph of your commit log history and may be easier to visualiz
 added new line to get conflict and to resolve it with deffmerge
 commits. Sometimes you will have large enough number of commits that counting can become
 troublesome. In that case grab the SHA from the last commit that your branch branches from.
+line five.one added
 because file systems on those operating systems keep track of the file size in bytes. 
 There are for most text files a need to have end-of-line delimiters,
 which are done in a few different ways depending on operating system. 

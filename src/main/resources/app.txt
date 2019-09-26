@@ -7,6 +7,7 @@ known as an end-of-file marker, as padding after the last line in a text file.
 On modern operating systems such as Microsoft Windows and Unix-like systems,
 text files do not contain any special EOF character, 
 which will show a graph of your commit log history and may be easier to visualize your
+added new line to get conflict and to resolve it with deffmerge
 commits. Sometimes you will have large enough number of commits that counting can become
 troublesome. In that case grab the SHA from the last commit that your branch branches from.
 because file systems on those operating systems keep track of the file size in bytes. 

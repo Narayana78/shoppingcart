@@ -1,11 +1,14 @@
 A text file (sometimes spelled textfile; 
 an old alternative name is flatfile) is a kind of computer file that is structured as a sequence of lines of electronic text.
- A text file exists stored as data within a computer file system. In operating systems such as CP/M and MS-DOS,
+A text file exists stored as data within a computer file system. In operating systems such as CP/M and MS-DOS,
 where the operating system does not keep track of the file size in bytes, 
 the end of a text file is denoted by placing one or more special characters,
 known as an end-of-file marker, as padding after the last line in a text file.
 On modern operating systems such as Microsoft Windows and Unix-like systems,
 text files do not contain any special EOF character, 
+which will show a graph of your commit log history and may be easier to visualize your
+commits. Sometimes you will have large enough number of commits that counting can become
+troublesome. In that case grab the SHA from the last commit that your branch branches from.
 because file systems on those operating systems keep track of the file size in bytes. 
 There are for most text files a need to have end-of-line delimiters,
 which are done in a few different ways depending on operating system. 

@@ -48,6 +48,7 @@ public class AuthController {
 		 * ResponseEntity(user + authService.login(user)+ " with user Id: "
 		 * +user.getUserId(), HttpStatus.INTERNAL_SERVER_ERROR); }
 		 */
+		System.out.println("to test diff merge ");
 		return authService.login(user) + " with user Id:" + user.getUserId();
 	}
 
